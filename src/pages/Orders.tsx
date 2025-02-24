@@ -34,7 +34,7 @@ export default function Orders({ className }: { className?: string }) {
   };
 
   return (
-    <div dir="ltr" className={`${className} flex relative`}>
+    <div dir="ltr" className={`${className} flex relative max-h-[calc(100%-120px)]`}>
       <SidebarProvider dir="ltr">
         {/* Sidebar Panel */}
         <div

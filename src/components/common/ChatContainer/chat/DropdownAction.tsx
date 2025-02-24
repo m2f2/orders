@@ -9,10 +9,10 @@ import { Edit, EllipsisVertical, Trash2 } from "lucide-react";
 const DropdownAction = () => {
   return (
     <DropdownMenu dir="rtl">
-      <DropdownMenuTrigger>
-        <button className="text-[#98A2B2] transition-colors">
+      <DropdownMenuTrigger asChild>
+        <div className="text-[#98A2B2] transition-colors">
           <EllipsisVertical className="h-4 w-4" />
-        </button>
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="bg-white border border-[#E2E8F0] rounded-xl shadow-lg mt-2 p-3" >
         <DropdownMenuItem

@@ -3,6 +3,7 @@ import { useAtom } from "jotai";
 import { ChatStatusBar } from "./chat/ChatStatusBar";
 import { ChatMessagesList } from "./chat/ChatMessagesList";
 import { fullscreenAtom } from "@/store/fullscreenAtom";
+import ReplySection from "./chat/ReplySection/ReplySection";
 
 export function ChatContainer() {
   const [isFullscreen, setIsFullscreen] = useAtom(fullscreenAtom);
@@ -30,7 +31,7 @@ export function ChatContainer() {
 
   return (
     <div
-      className={`flex flex-col bg-white h-full`}
+      className="flex flex-col bg-white h-[calc(100%-112px)] w-full"
       ref={containerRef}
       dir="rtl"
     >
@@ -45,11 +46,13 @@ export function ChatContainer() {
         />
       </div>
 
-      {/* Messages Area */}
-      <ChatMessagesList />
+      {/* Messages Area - Dynamic Height */}
+      <div className="flex-grow overflow-y-auto scrollbar-hidden">
+        <ChatMessagesList />
+      </div>
 
       {/* Reply Section */}
-      <h1>test</h1>
+      <ReplySection />
     </div>
   );
 }

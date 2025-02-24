@@ -98,7 +98,7 @@ export const ChatMessage = ({
             </div>
           </AccordionTrigger>
 
-          <AccordionContent className=" rounded-lg shadow-md ">
+          <AccordionContent className=" rounded-lg shadow-md p-2">
             {message.split("\n").map((line, index) => (
               <p
                 key={`${sender}-${date}-${time}-line-${index}`}
